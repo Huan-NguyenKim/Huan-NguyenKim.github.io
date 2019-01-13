@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <title>About Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      .center {
+    margin: auto;
+    width: 40%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    background-color: lightgreen
+}
+            
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:chartreuse
+}
+
+li {
+    float: left;
+    border-right: black 
+}
+
+li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: yellow;
+}
+
+.active {
+    background-color: blue
+}
+ body {
+        background-color:lightblue;
+        }
+        
+
+    .container {
+  position: relative;
+  width: 60%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+        
+ img { 
+ border-radius: 50% 
+</style>
+</head>
+
+<ul>
+  <li><a href="index.html">HomePage</a></li>
+    <li><a href="About Me.html">About My Page</a></li>
+  <li><a href="Length.html">Length Conversion</a></li>
+
+   <li><a href="Weight.html">Weight Conversion</a></li>
+</ul>
+
+
+<div class="center">
+ <h1 class= "centered sanSerif">Weight Converter</h1>
+ 
+<div id=outer><div id=cover><form name=uc>
+<table class=main>
+<tr><td>Unit Type</td><td><select id='ut' onchange=selunit();><option value='1'>Weight</select></td></tr></table>
+<div id=t1><table class=main><tr><td>No. of units<td><input id=wip value=1 onchange=weight();><tr><td>Convert from<td><select id=fweight onchange=weight();>
+<option value=1>Grams
+<option value=1000 selected>Kilograms
+<option value=1000000>Tonnes
+<option value=28.34952>Ounces
+<option value=453.59237>Pounds
+<option value=907184.74>Short Tons (US)
+
+
+</select><tr><td>Convert to<td><select id=tweight onchange=weight();>
+            
+<option value=1>Grams
+<option value=1000>Kilograms
+<option value=1000000 selected>Tonnes
+<option value=28.34952>Ounces
+<option value=453.59237>Pounds
+<option value=907184.74>Short Tons (US)
+
+ </select><tr><td colspan=2><input class=output id=wop></table></div>
+
+<div id=t4><table class=main><tr><td>No. of units<td>
+
+
+
+
+<div id=t2><table class=main><tr><td>No. of units<td>
+</select><tr><td colspan=2><input class=output id=aop></table></div>
+<div id=t3><table class=main><tr><td>No. of units<td>
+
+</select><tr><td colspan=2><input class=output id=sop></table></div>
+
+<div id=t5><table class=main><tr><td>No. of units<td>
+
+</select><tr><td>Convert to<td><select id=tvol onchange=vol();>
+
+
+<tr><td colspan=2><input class=output id=vop></table></div>
+<div id=t6><table class=main><tr><td>
+
+<tr><td colspan=2><input class=output id=top1></table></div></form></div>
+     
+   
+
+
+
+
+
+<script>
+    function gid(){var elements=new Array();for (var i=0;i < arguments.length;i++) {var element=arguments[i];if(typeof element=='string') element=document.getElementById(element);if(arguments.length==1) return element; elements.push(element);} return elements;}
+function hi(){gid('t1').style.display="none";gid('t2').style.display="none";gid('t3').style.display="none";gid('t4').style.display="none";gid('t5').style.display="none";gid('t6').style.display="none";}
+function uc1(){gid('t1').style.display="block";}
+function uc2(){gid('t2').style.display="block"}
+function uc3(){gid('t3').style.display="block";}
+function uc4(){gid('t4').style.display="block";}
+function uc5(){gid('t5').style.display="block";}
+function uc6(){gid('t6').style.display="block";}
+function len(){
+var from=gid('flength').value;
+var to=gid('tlength').value;
+var totext = gid('tlength').options[gid('tlength').selectedIndex].text;
+var ip=gid('lip').value;
+if(gid('lip').value==null||gid('lip').value.length==0)gid('lop').value='{$eunit}';
+else
+gid('lop').value=Math.round(ip*from/to*100000)/100000+ ' ' +totext ;}
+function area(){
+var from=gid('farea').value;
+var to=gid('tarea').value;
+var totext = gid('tarea').options[gid('tarea').selectedIndex].text;
+ip=gid('aip').value;
+if(gid('aip').value==null||gid('aip').value.length==0)gid('aop').value='{$eunit}';
+else
+gid('aop').value=Math.round(ip*from/to*100000)/100000+ ' ' +totext ;}
+function speed(){
+var from=gid('fspeed').value;
+var to=gid('tspeed').value;
+var totext = gid('tspeed').options[gid('tspeed').selectedIndex].text;
+var ip=gid('sip').value;
+if(gid('sip').value==null||gid('sip').value.length==0)gid('sop').value='{$eunit}';
+else
+gid('sop').value=Math.round(ip*from/to*100000)/100000+ ' ' +totext ;}
+function weight(){
+var from=gid('fweight').value;
+var to=gid('tweight').value;
+var ip=gid('wip').value;
+var totext = gid('tweight').options[gid('tweight').selectedIndex].text;
+if(gid('wip').value==null||gid('wip').value.length==0)gid('wop').value='{$eunit}';
+else
+gid('wop').value=Math.round(ip*from/to*100000)/100000+ ' ' +totext ;}
+function vol(){
+var from=gid('fvol').value;
+var to=gid('tvol').value;
+var ip=gid('vip').value;
+var totext = gid('tvol').options[gid('tvol').selectedIndex].text;
+if(gid('vip').value==null||gid('vip').value.length==0)gid('vop').value='{$eunit}';
+else
+gid('vop').value=Math.round(ip*from/to*100000)/100000+ ' ' +totext ;}
+function temp(){
+var from=gid('ftemp').value;
+var to=gid('ttemp').value;
+var ip=gid('tip').value;
+var totext = gid('ttemp').options[gid('ttemp').selectedIndex].text;
+if(gid('tip').value==null||gid('tip').value.length==0)gid('top').value='{$eunit}';
+else
+if(from==1&&to==1)gid('top').value=ip+ ' ' +totext ;
+if(from==1&&to==2)gid('top').value=((ip*9/5)+32*1).toFixed(2)+ ' ' +totext ;
+if(from==1&&to==3)gid('top').value=(ip*1+273.15*1).toFixed(2)+ ' ' +totext ;
+if(from==2&&to==1)gid('top').value=((ip-32)*5/9).toFixed(2)+ ' ' +totext ;
+if(from==2&&to==2)gid('top').value=ip+ ' ' +totext ;
+if(from==2&&to==3)gid('top').value=(((ip-32)*5/9)+273.15).toFixed(2)+ ' ' +totext ;
+if(from==3&&to==1)gid('top').value=(ip-273.15).toFixed(2)+ ' ' +totext ;
+if(from==3&&to==2)gid('top').value=((ip-273.15)*9/5 +32*1).toFixed(2)+ ' ' +totext ;
+if(from==3&&to==3)gid('top').value=ip+ ' ' +totext ;}
+function selunit(){
+if(gid('ut').value=='1'){hi();uc1();weight();};if(gid('ut').value=='2'){hi();uc2();area();};if(gid('ut').value=='3'){hi();uc3();speed();};if(gid('ut').value=='4'){hi();uc4();len();};if(gid('ut').value=='5'){hi();uc5();vol();};if(gid('ut').value=='6'){hi();uc6();temp();};}
+window.onload=function(){hi();uc1();weight();}</script>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <title>About Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+      .center {
+    margin: auto;
+    width: 40%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    background-color: lightgreen
+}
+            
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:chartreuse
+}
+
+li {
+    float: left;
+    border-right: black 
+}
+
+li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: yellow;
+}
+
+.active {
+    background-color: blue
+}
+ body {
+        background-color:lightblue;
+        }
+        
+
+    .container {
+  position: relative;
+  width: 60%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+        
+ img { 
+ border-radius: 50% 
+</style>
+</head>
+
+
+<ul>
+  <li><a href="index.html">HomePage</a></li>
+    <li><a href="About Me.html">About My Page</a></li>
+  <li><a href="Length.html">Length Conversion</a></li>
+
+   <li><a href="Weight.html">Weight Conversion</a></li>
+</ul>
+<body>
+
+    
+    
+    <div class="container">
+  <img src="https://i.imgur.com/VbDiVNx.jpg alt="Huan NguyenKim" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">My Hometown </div>
+  </div>
+</div>
+    
+<div class="container">
+  <img src="https://i.imgur.com/4XqWMie.jpg alt="Huan NguyenKim" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">My old classmates in CTUMP </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <img src="https://i.imgur.com/lyw3OYU.jpgalt="Huan NguyenKim" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">I love travelling </div>
+  </div>
+</div>
+
+<div class="container">
+  <img src="https://i.imgur.com/q8mUEcu.jpg="Huan NguyenKim" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">I admire the military </div>
+  </div>
+</div>
+  
+    
+    
+     <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-black" id="contact">
+    <h2 class="w3-text-light-black">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, California, US</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (415) 770-4377 </p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ngkimhuan@hotmail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+     
+
+
+<p id="demo"></p>
+  
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    
+    
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+   
+
+  </footer>
+
+    
+</body>
+</html>

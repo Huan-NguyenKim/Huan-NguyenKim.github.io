@@ -1,0 +1,3 @@
+<? php
+phpin f o ( ) ;
+?>
